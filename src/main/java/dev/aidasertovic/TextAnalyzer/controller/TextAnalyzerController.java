@@ -1,15 +1,9 @@
 package dev.aidasertovic.TextAnalyzer.controller;
-
-import dev.aidasertovic.TextAnalyzer.exception.ApiRequestException;
-import dev.aidasertovic.TextAnalyzer.model.AnalysisOptionEnum;
 import dev.aidasertovic.TextAnalyzer.model.AnalysisRequest;
 import dev.aidasertovic.TextAnalyzer.model.AnalysisResponse;
 import dev.aidasertovic.TextAnalyzer.repository.AnalyzerRepository;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Arrays;
-import java.util.List;
 
 @RestController
 @RequestMapping()

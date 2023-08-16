@@ -1,6 +1,5 @@
 package dev.aidasertovic.TextAnalyzer.model;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 
 public record AnalysisRequest(
