@@ -1,4 +1,5 @@
 package dev.aidasertovic.TextAnalyzer.controller;
+
 import dev.aidasertovic.TextAnalyzer.model.AnalysisRequest;
 import dev.aidasertovic.TextAnalyzer.model.AnalysisResponse;
 import dev.aidasertovic.TextAnalyzer.repository.AnalyzerRepository;
@@ -18,7 +19,7 @@ public class TextAnalyzerController {
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public AnalysisResponse analyze(@Valid @RequestBody AnalysisRequest input) {
-            return repository.analyze(input);
+        return repository.analyze(input);
     }
 
 

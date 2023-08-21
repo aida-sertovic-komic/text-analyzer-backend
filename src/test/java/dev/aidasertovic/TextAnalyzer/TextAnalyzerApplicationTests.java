@@ -66,7 +66,7 @@ class TextAnalyzerApplicationTests {
         resultMap.put('l',2);
         resultMap.put('d',2);
         resultMap.put('r',2);
-        resultMap.put('n', 5);
+        resultMap.put('n',5);
         resultMap.put('v',1);
         resultMap.put('w',1);
         resultMap.put('c',1);
@@ -75,7 +75,7 @@ class TextAnalyzerApplicationTests {
     }
 
     @Test
-    void itShouldReturnEmptyMapGivenNullInputTextAndVowelsOption() {
+    void itShouldReturnEmptyResultGivenNullInputTextAndVowelsOption() {
         AnalysisRequest input = new AnalysisRequest(AnalysisOptionEnum.VOWELS, null);
 
         AnalysisResponse response = repository.analyze(input);
@@ -86,7 +86,7 @@ class TextAnalyzerApplicationTests {
     }
 
     @Test
-    void itShouldReturnEmptyMapGivenNullInputTextAndConsonantsOption() {
+    void itShouldReturnEmptyResultGivenNullInputTextAndConsonantsOption() {
         AnalysisRequest input = new AnalysisRequest(AnalysisOptionEnum.CONSONANTS, null);
 
         AnalysisResponse response = repository.analyze(input);
@@ -96,7 +96,7 @@ class TextAnalyzerApplicationTests {
         assertEquals(response.result(), resultMap);
     }
     @Test
-    void itShouldReturnEmptyMapGivenNullInputTextAndBothOption() {
+    void itShouldReturnEmptyResultGivenNullInputTextAndBothOption() {
         AnalysisRequest input = new AnalysisRequest(AnalysisOptionEnum.BOTH, null);
 
         AnalysisResponse response = repository.analyze(input);
@@ -107,7 +107,7 @@ class TextAnalyzerApplicationTests {
     }
 
     @Test
-    void itShouldReturnEmptyMapGivenEmptyInputTextAndVowelsOption() {
+    void itShouldReturnEmptyResultGivenEmptyInputTextAndVowelsOption() {
         AnalysisRequest input = new AnalysisRequest(AnalysisOptionEnum.VOWELS, "");
 
         AnalysisResponse response = repository.analyze(input);
@@ -117,7 +117,7 @@ class TextAnalyzerApplicationTests {
         assertEquals(response.result(), resultMap);
     }
     @Test
-    void itShouldReturnEmptyMapGivenEmptyInputTextAndConsonantsOption() {
+    void itShouldReturnEmptyResultGivenEmptyInputTextAndConsonantsOption() {
         AnalysisRequest input = new AnalysisRequest(AnalysisOptionEnum.CONSONANTS, "");
 
         AnalysisResponse response = repository.analyze(input);
@@ -127,7 +127,7 @@ class TextAnalyzerApplicationTests {
         assertEquals(response.result(), resultMap);
     }
     @Test
-    void itShouldReturnEmptyMapGivenEmptyInputTextAndBothOption() {
+    void itShouldReturnEmptyResultGivenEmptyInputTextAndBothOption() {
         AnalysisRequest input = new AnalysisRequest(AnalysisOptionEnum.BOTH, "");
 
         AnalysisResponse response = repository.analyze(input);
